@@ -1,0 +1,247 @@
+.Background{
+    /* background-color: burlywood; */
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+h1{
+    background-color: black;
+    color: orange;
+    text-align: center; font-size: xxx-large; width: 50%;margin: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+body{
+    background-image: url("Main_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.Team_Info, .Name_Info,.Standing_Info,.Potential_Info{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+
+.Team1 , .Team2{
+    /* border-bottom-left-radius: 85px;
+    border-top-left-radius: 85px; */
+    margin: 2%;
+    /* border: 2px solid; */
+    width: 30%;
+    
+     flex: 1 1 300px ;
+    /* min-width: 300px; */
+   
+    padding: 3%;
+}
+.Team1{
+    background: #13346f;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+   
+}
+.Team2{
+    background: #154c4e;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+}
+.param, .value{
+    word-wrap: break-word;
+    margin: auto;
+    width: 38%;
+    padding: 10px;
+    border: 2px solid;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 50px;
+    outline: none;
+
+}
+.Toss_Info{
+    margin-left: 10%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    box-sizing: border-box;
+}
+.Toss_Winner,.Button{
+    
+
+    margin: 2%;
+    border: 2px ;
+    flex: 1 1 300px;
+    padding: 3%;
+}
+#Button{
+    border: 2px solid;
+    border-radius: 50px;
+    margin:auto;
+    width: 40%;
+    font-size: 25px;
+    padding: 10px;
+}
+.Toss_param{
+    /* flex: 0.2 0.2 10px; */
+    
+    word-wrap: break-word;
+    border: 2px solid;
+    /* padding: 10px; */
+    border-radius: 50px;
+    /* width: 170px; */
+    font-size: 23px;
+    text-align: center;
+    /* height: auto; */
+    /* margin-left: 45%; */
+    /* text-align: center; */ 
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+.Toss_value{
+    /* flex: 0.3 0.6 10px; */
+    word-wrap: break-word;
+    border: 2px solid;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 50px;
+    outline: none;
+    height:auto;
+    font-size: 25px;
+    text-indent: 15%;
+    margin-left: 10px;
+    
+
+    
+}
+.list-inline_text-center{
+    display: flex;
+    margin-left: 35%;
+    margin-right: 35%;
+    /* padding-left: 30%; */
+    width: 30%; 
+
+}
+ul{
+    padding-inline-start: 0px;
+
+}
+
+#Button:hover{
+    border: green;
+}
+.value:hover{
+   
+    border-color: #f9a825;
+}
+
+@media (min-width:500px) and (max-width:800px)
+{
+        .Team1,.Team2{
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-right-radius: 0px;
+            margin-left: 10%;
+            margin-right: 10%;
+        
+            }
+            h1{
+                
+                font-size:35px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .value,.param{
+                font-size: 25px;
+            }
+            .Team_Info{
+                flex-wrap: wrap;
+            }
+            .Toss_Info{
+                margin-left: 15%;;
+                font-size: 22px;
+            }
+            .Toss_param{
+                font-size: 21px;
+            }
+            .Toss_Winner{
+                /* background:orange; */
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+            }
+            
+            /* .list-inline_text-center{
+                margin-left: 10%;    
+            } */
+        
+    
+}
+
+@media (max-width:500px){
+    .Team1,.Team2{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    }
+    
+    h1{
+        
+        font-size:25px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .value,.param{
+        font-size: 15px;
+    }
+    .Team_Info{
+        flex-wrap: wrap;
+    }
+    .Toss_Winner{
+        /* background:orange; */
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .Toss_param{
+        text-align: center;
+        margin-left:10%;
+        min-width: 20%;
+        font-size: 20px;
+        max-height: 50%;
+    }
+    .Toss_value{
+        font-size: 20px;
+        margin-right: 10%;
+        
+
+    }
+    .Button{
+        /* background-color: cyan; */
+        text-align: center;
+        font-size: 30px;
+    }
+    .Toss_Info{
+        margin-left: 0%;
+        
+        flex-wrap: wrap;
+    }
+    .list-inline_text-center{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        
+            
+    } 
+
+}

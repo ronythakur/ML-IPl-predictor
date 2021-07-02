@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Predictor</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='Main.css')}}">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Predicting Result of an IPL Match using Machine Learning</h1>
+
+    <form id="myform" action='/Predict' method="POST">
+
+        <div class="Main">
+
+            <div class="Team_Info Background">
+                <div class="Team1 Background" >
+                    <div class="Name_Info">
+                        <div class="param" style="margin:10px; background: #29446b; color: #fff703;">Team1</div>
+                        <select name="Name1" class="value" id="Name1" style="text-indent: 25%; color: teal; " required >
+                            <option style="display: none;"></option>
+                            <option value="CSK">CSK</option>
+                            <option  value="DC">DC</option>
+                            <option value="KKR">KKR</option>
+                            <option value="MI">MI</option>
+                            <option value="PBKS">PBKS</option>
+                            <option value="RCB">RCB</option>
+                            <option value="RR">RR</option>
+                            <option value="SRH">SRH</option>
+                        </select>
+                    </div>
+                    <!-- Standing -->
+        
+                    <div class="Standing_Info">
+                        <label for="Standing1" class="param" style="margin: 10px; background: #29446b; color: #fff703">Standing</label>
+                        <input name="Standing1" required type="number" max=8 min=1 step=1 title="Pick a value between 1-8" class="value" style=" color: darkgreen ; ">
+                    </div>
+                    <!-- Potential -->
+                    <div class="Potential_Info">
+                        <label for="Potential1" class="param" style="margin: 10px; background: #29446b; color: #fff703">Potential</label>
+                        <input  name="Potential1" required class="value" type="number" max=70 min=11 step=1 title="Pick a value between 1-100" style="color:darkgreen">
+                    </div>
+        
+                </div>
+                <div class="Team2 Background">
+                    <div class="Name_Info">
+                        <div class="param" style="margin: 10px; background: #820707; color: yellow;">Team2</div>
+                        <select name="Name2" class="value" id="Name2"  title="Pick a Team" style="text-indent: 25%; color: #fb0101;" required>
+                            <option style="display: none;"></option>
+                            <option value="CSK">CSK</option>
+                            <option  value="DC">DC</option>
+                            <option value="KKR">KKR</option>
+                            <option value="MI">MI</option>
+                            <option value="PBKS">PBKS</option>
+                            <option value="RCB">RCB</option>
+                            <option value="RR">RR</option>
+                            <option value="SRH">SRH</option>
+                        </select>
+                    </div>
+                    <!-- Standing -->
+        
+                    <div class="Standing_Info">
+                        <label for="Standing2" class="param" style="margin: 10px; background: #820707; color: yellow;">Standing</label>
+                        <input name="Standing2" required type="number" max=8 min=1 step=1 class="value" title="Pick a value between 1-8" style=" color: #fb0101; ">
+                    </div>
+                    <!-- Potential -->
+                    <div class="Potential_Info">
+                        <label for="Potential2" class="param" style="margin: 10px; background: #820707; color: yellow;">Potential</label>
+                        <input  name="Potential2" required class="value" type="number" max=70 min=11 step=1 title="Pick a value between 1-100"  style="color: red; ">
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="Toss_Info">
+                <div class="Toss_Winner" style="display: flex; justify-content: center;  ">
+                    <label for="Toss" class="Toss_param" style="background:#29446b; color: yellow;">Toss Winner</label>
+                    <select name="Toss" class="Toss_value"  required style="border-color: #0b5f0d; color: rgb(118, 23, 228);">
+                        <option style="display: none;"></option>
+                    </select>
+                </div>
+                
+                <div class="Button">
+                    <button  id="Button" type="submit"  style="background: green; color: white;">Predict</button>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+    
+      
+      <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7 ">
+                    <ul class="list-inline_text-center" style="list-style-type: none;">
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/tarun-bhandari-48a1b8192/" target="_blank">
+                                <span class="fa-stack fa-lg"  style="margin-right: 20px">
+                                    <i class="fas fa-circle fa-stack-2x" style="height: 60px;"></i>
+                                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/ronythakur/" target="_blank" >
+                                <span class="fa-stack fa-lg"  style="margin-right: 20px">
+                                    <i class="fas fa-circle fa-stack-2x " style="height: 60px;"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/tarun.bhandari99/" target="_blank">
+                                <span class="fa-stack fa-lg"  style="margin-right: 20px">
+                                    <i class="fas fa-circle fa-stack-2x" style="height: 60px;"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{{url_for('static',filename='Main.js')}}"></script>
+<!-- <script src="{{url_for('static',filename='Piechart.js')}}"></script> -->
+
+
+
+
+
+        
+        
+        
+
+        
+</html>

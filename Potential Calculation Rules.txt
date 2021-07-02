@@ -1,0 +1,54 @@
+Batsman points distribution-
+
+Max.Runs=runs scored by orange cap holder
+
+1. 5-points to those who have scored more than 90% of Max.runs
+2. 4-points to those players who have scored more than 70% and less than 90% of Max.runs
+3. 3-points to those players who have scored more than 50% and less than 70% of Max.runs.
+4. 2-points to those players who have scored more than 40% and less than 50% of Max.runs.
+5. Others will be given 1 points
+Bonus Points-- 1 points to those who have strike-rate greater than 150 and more than 40% of Max.runs should be scored by him.
+
+---------------------------------------------------------------------------------------------------------------------------
+Bowlers points distribution--
+
+Max.wicket=Wicket taken by purple cap holder
+
+1.5-points to those who have taken more than 90% of Max.wicket.
+2.4-points to those who have taken more than 70% and less than 90% of Max.wicket.
+3.3-points to those who have taken more than 50% and less than 70% of Max.wicket.
+4.2-points to those who have taken more than 40% and less than 50% of Max.wicket.
+
+Bonus Points-- 1 points to those who have economy less than 7.00 and minimum matches should be 5 or should have taken more than 10 wickets.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Points given to players who have played less than half the matches played by his team but are solid with their performance--
+
+Note: Max. points can be awarded to them is 3
+
+For Batsman--
+
+1.3-points to those who have scored more than 30% of max runs with an strike rate of 135 or above and matches played should be less than 9.
+2.2-points to those who have scored more than 30% of max runs with an strike rate of 120 or above and matches played should be less than 9.
+
+
+
+For Bowlers:
+ 1.3-points to those who have taken more than 40% of wickets with an economy of less than 7.5 in less than 9 matches.
+ 2.2-points to those who have taken more than 40% of wickets with an economy of less than 9 in less than 9 matches.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

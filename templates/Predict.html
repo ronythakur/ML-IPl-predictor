@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='favicon.ico')}}" />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='Predict.css')}}">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    
+
+</head>
+<body>
+    
+        
+       
+        <div id="main_content ">
+            <h1 id="Heading">Predicted Result</h1>
+            <canvas id="myChart" width=400px height=300px>
+            <p>Patrick Cummins goes band bang</p>
+            <div id="t1_name">{{t1_name}}</div>
+            <div id="t1_percent">{{t1_percent}}</div>
+            <div id="t1_clr">{{t1_clr}}</div>
+
+
+            <div id="t2_name">{{t2_name}}</div>
+            <div id="t2_percent">{{t2_percent}}</div>
+            <div id="t2_clr">{{t2_clr}}</div>
+                
+                
+
+            </canvas>
+        </div> 
+    
+
+        <footer class="border-top" style="margin-bottom: 50px;">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline_text-center" style="display: flex;">
+                            <li class="list-inline-item" style="list-style-type: none;">
+                                <a href="https://www.linkedin.com/in/tarun-bhandari-48a1b8192/" target="_blank">
+                                    <span class="fa-stack fa-lg" style="margin-right: 20px; ">
+                                        <i class="fas fa-circle fa-stack-2x" style="height: 80px;"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse "></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item"style="list-style-type: none;">
+                                <a href="https://github.com/ronythakur/" target="_blank" >
+                                    <span class="fa-stack fa-lg" style="margin-right: 20px;">
+                                        <i class="fas fa-circle fa-stack-2x" style="height: 80px; "></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item" style="list-style-type: none;">
+                                <a href="https://www.instagram.com/tarun.bhandari99/" target="_blank">
+                                    <span class="fa-stack fa-lg" style="margin-right: 20px;">
+                                        <i class="fas fa-circle fa-stack-2x" style="height: 80px;"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+    
+    
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!-- <script src="{{url_for('static',filename='Main.js')}}"></script> -->
+<script src="{{url_for('static',filename='Piechart.js')}}"></script>
+
+</html>
